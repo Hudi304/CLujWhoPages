@@ -2,6 +2,9 @@ import './navbar-component.scss'
 import Typography from '@mui/material/Typography'
 
 import logo from '../../../../assets/LEGO_logo.svg.png'
+import ClujWhoLogo from '../../../../assets/ClujWHOLogo.png'
+import ClujWhoLogoBar from '../../../../assets/ClujWHOLogoBar.png'
+
 import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -22,7 +25,7 @@ export function NavBarComponent(props: any): JSX.Element {
         <div className={`nav-bar-component ${navBarClasses}`}>
             <div className="nav-bar-container-grid">
                 <div className="nav-bar-logo-container">
-                    <img className="nav-bar-logo" src={logo} />
+                    <img className="nav-bar-logo" src={ClujWhoLogoBar} />
                 </div>
 
                 <div className="nav-bar-flex-container">
