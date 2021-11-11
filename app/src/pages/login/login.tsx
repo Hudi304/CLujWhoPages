@@ -15,7 +15,7 @@ import './login.scss'
 import Paper from '@mui/material/Paper'
 import { TeamMemberCard } from './components/team-member-component/team-member-component'
 
-function Login(props: any): JSX.Element {
+function Home(props: any): JSX.Element {
     const history = useHistory()
 
     const [navBarClasses, setNavBarClasses] = useState('')
@@ -24,14 +24,14 @@ function Login(props: any): JSX.Element {
         threshold: 0.5
     })
 
-    useEffect(() => {
-        console.log('IN VIEW', inView)
-        if (inView) {
-            setNavBarClasses('')
-        } else {
-            setNavBarClasses('nav-bar-active')
-        }
-    }, [inView])
+    // useEffect(() => {
+    //     console.log('IN VIEW', inView)
+    //     if (inView) {
+    //         setNavBarClasses('')
+    //     } else {
+    //         setNavBarClasses('nav-bar-active')
+    //     }
+    // }, [inView])
 
     return (
         <>
@@ -84,5 +84,5 @@ const mapStateToProps = (state: any) => ({
 
 const mapDispatchToProps = (dispatch: any) => ({ dispatch, ...bindActionCreators({ login }, dispatch) })
 
-export const LoginPage = connect(mapStateToProps, mapDispatchToProps)(Login)
+export const HomePage = connect(mapStateToProps, mapDispatchToProps)(Home)
 // conecteaza pagina la store, deci avem access la store
